@@ -1,186 +1,222 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Page Pessoal</title>
-
+    <title>Joaquim Almeida | Desenvolvedor Full Stack</title>
     <link rel="stylesheet" href="style.css" />
+    <!-- Fonte Inter via Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
   </head>
 
-  <body id="inicio">
-    <header class="cabecalho">
-      <h1 class="titulo-principal">Joaquim Almeida</h1>
-      <hr class="linha" />
+  <body>
+    <!-- CABEÇALHO / NAV -->
+    <header class="header">
+      <div class="logo">Joaquim<span>.Dev</span></div>
+      <nav class="nav">
+        <a href="#inicio">Início</a>
+        <a href="#sobre">Sobre Mim</a>
+        <a href="#experiencia">Experiência</a>
+        <a href="#tecnologias">Projetos & Tech</a>
+        <a href="#contato" class="btn-nav">CONTATO</a>
+      </nav>
     </header>
 
-    <nav class="menu">
-       <a class="link-menu" href="index.html">Início</a>
-      <a class="link-menu" href="sobremim.html">Sobre Mim</a>
-      <a class="link-menu" href="resumo.html">Resumo</a>
-      <a class="link-menu" href="curriculo.html">Curriculo</a>
-    </nav>
-    <div class="redes">
-      <div class="rede">
-        <a
-          class="botao-rede"
-          href="https://www.linkedin.com/in/-joaquimal/"
-          target="_blank"
-        >
-          LinkedIn
-        </a>
+    <!-- HERO SECTION (INÍCIO) -->
+    <section id="inicio" class="hero-section">
+      <div class="hero-content">
+        <div class="badge-status">
+          <span class="status-dot"></span>
+          DISPONÍVEL PARA PROJETOS E OPORTUNIDADES
+        </div>
+
+        <h1 class="hero-title">
+          Joaquim<br />
+          <span class="highlight">Almeida</span>
+        </h1>
+
+        <h2 class="hero-subtitle">Aspirante a Desenvolvedor Full Stack</h2>
+
+        <p class="hero-description">
+          Sou um profissional focado em resultados, com sólida base em tecnologia e desenvolvimento web. Aplico boas práticas para desenvolver aplicações modernas, eficientes e escaláveis.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#contato" class="btn-primary">Entrar em Contato &rarr;</a>
+          <a href="https://github.com/JoaquimAl-Prog" target="_blank" class="btn-secondary">GitHub</a>
+        </div>
       </div>
 
-      <div class="rede">
-        <a
-          class="botao-rede"
-          href="https://github.com/JoaquimAl-Prog"
-          target="_blank"
-        >
-          GitHub
-        </a>
+      <div class="hero-image-wrapper">
+        <div class="hero-card-img">
+          <img src="Imagens/foto2.jpeg" alt="Foto de Joaquim Almeida" class="profile-photo" />
+          <span class="online-indicator"></span>
+        </div>
       </div>
-    </div>
+    </section>
 
-    <main class="container">
-      <!-- SOBRE MIM -->
+    <!-- MÉTRICAS / DESTAQUES -->
+    <section class="stats-section">
+      <div class="stat-item">
+        <h3 class="stat-number">19</h3>
+        <p class="stat-label">Anos de idade</p>
+      </div>
+      <div class="stat-item">
+        <h3 class="stat-number">100%</h3>
+        <p class="stat-label">Foco e dedicação</p>
+      </div>
+      <div class="stat-item">
+        <h3 class="stat-number">5+</h3>
+        <p class="stat-label">Tecnologias principais</p>
+      </div>
+    </section>
 
-      <section class="card">
-        <div class="imagem-perfil">
-          <div class="foto-perfil">
-            <img class="foto" src="Imagens/foto2.jpeg" alt="Minha Foto" />
+    <!-- SOBRE MIM -->
+    <section id="sobre" class="section">
+      <div class="section-badge">SOBRE MIM</div>
+      
+      <div class="grid-2-cols">
+        <div class="about-text">
+          <h2 class="section-title">
+            Código limpo,<br />
+            <span class="highlight">resultados</span> reais.
+          </h2>
+          <p class="text-p">
+            Olá! Meu nome é <strong>Joaquim Almeida</strong>. Nasci em Quissamã - RJ e atualmente moro na Ilha do Governador - RJ.
+          </p>
+          <p class="text-p">
+            Sou apaixonado por tecnologia e estou em constante evolução na área de desenvolvimento de software, buscando sempre aprender novas ferramentas e construir soluções de alto impacto.
+          </p>
+        </div>
+
+        <div class="info-card">
+          <h3 class="card-title">Informações Pessoais</h3>
+          <table class="info-table">
+            <tr>
+              <td>Naturalidade</td>
+              <td>Quissamã - RJ</td>
+            </tr>
+            <tr>
+              <td>Residência</td>
+              <td>Ilha do Governador - RJ</td>
+            </tr>
+            <tr>
+              <td>Área de Atuação</td>
+              <td>Tecnologia / Dev Web</td>
+            </tr>
+            <tr>
+              <td>Formação</td>
+              <td>Ensino Médio Completo</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIÊNCIA & FORMAÇÃO -->
+    <section id="experiencia" class="section">
+      <div class="grid-2-cols">
+        <!-- Coluna Experiência -->
+        <div>
+          <span class="code-tag">// EXPERIÊNCIA PROFISSIONAL</span>
+          <div class="timeline">
+            <div class="timeline-item">
+              <span class="timeline-date">Recente</span>
+              <h3 class="timeline-title">Jovem Aprendiz Operacional</h3>
+              <p class="timeline-desc">Atuação no suporte logístico, otimização de rotinas diárias e gestão de fluxos operacionais com foco em eficiência.</p>
+            </div>
+            <div class="timeline-item">
+              <span class="timeline-date">Processos</span>
+              <h3 class="timeline-title">Suporte Administrativo</h3>
+              <p class="timeline-desc">Emissão de relatórios, controle de dados organizacionais e garantia do fluxo contínuo de informações.</p>
+            </div>
           </div>
         </div>
 
-        <div class="conteudo">
-          <div class="bloco">
-            <h2 class="titulo">Sobre Mim</h2>
+        <!-- Coluna Hobbies e Pontos Fortes -->
+        <div>
+          <span class="code-tag">// PONTOS FORTES E HOBBIES</span>
+          <div class="skills-box">
+            <h4 class="sub-heading">Diferenciais Competitivos</h4>
+            <ul class="tag-list">
+              <li>Organização</li>
+              <li>Proatividade</li>
+              <li>Comunicação Assertiva</li>
+              <li>Trabalho em Equipe</li>
+              <li>Aprendizado Rápido</li>
+            </ul>
 
-            <p class="texto">
-              Sou apaixonado por tecnologia e desenvolvimento web, sempre
-              buscando aprender novas ferramentas e criar projetos modernos.
-            </p>
-          </div>
-
-          <div class="bloco">
-            <h3 class="subtitulo">Objetivo</h3>
-
-            <div class="descricao">
-              <p class="texto">
-                Evoluir como Desenvolvedor Full Stack e construir aplicações
-                modernas e funcionais.
-              </p>
-            </div>
-          </div>
-
-          <div class="bloco">
-            <h3 class="subtitulo">Pontos Fortes</h3>
-
-            <div class="lista">
-              <ul class="lista-caracteristicas">
-                <li>Organizado</li>
-                <li>Criativo</li>
-                <li>Proativo</li>
-                <li>Responsável</li>
-                <li>Aprendizado rápido</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- EXPERIÊNCIA -->
-
-      <section class="card">
-        <div class="conteudo">
-          <div class="bloco">
-            <h2 class="titulo">
-              <div class="galeria">
-                <img class="foto" src="Imagens/foto7.jpg" alt="Aeroporto" />
-                <img class="foto" src="Imagens/foto8.png" alt="Empresa" />
-              </div>
-
-              Experiência
-            </h2>
-          </div>
-
-          <div class="lista">
-            <ul class="lista-caracteristicas">
-              <li>Jovem Aprendiz – Operacional</li>
-              <li>Rotinas administrativas</li>
-              <li>Organização logística</li>
-              <li>Comunicação e trabalho em equipe</li>
+            <h4 class="sub-heading">Hobbies & Interesses</h4>
+            <ul class="tag-list glow">
+              <li>Videogames</li>
+              <li>Futebol</li>
+              <li>Basquete</li>
+              <li>Praia</li>
+              <li>Mecânica</li>
             </ul>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- FORMAÇÃO -->
+    <!-- PROJETOS & HABILIDADES DINÂMICAS (SISTEMA RENDERIZADO VIA JS) -->
+    <section id="tecnologias" class="section">
+      <div class="section-badge">PORTFÓLIO & TECH STACK</div>
+      
+      <h2 class="section-title">
+        Projetos e <span class="highlight">Tecnologias</span>
+      </h2>
+      
+      <p class="hero-description">
+        Filtre abaixo para explorar minhas habilidades e projetos por categoria.
+      </p>
 
-      <section class="card">
-        <div class="conteudo">
-          <div class="bloco">
-            <h2 class="titulo">Formação</h2>
+      <!-- Botões de Filtro -->
+      <div class="filter-container">
+        <button class="btn-filter active" data-categoria="Todos">Todos</button>
+        <button class="btn-filter" data-categoria="Front-end">Front-end</button>
+        <button class="btn-filter" data-categoria="Back-end">Back-end</button>
+        <button class="btn-filter" data-categoria="Ferramentas">Ferramentas</button>
+      </div>
 
-            <div class="descricao">
-              <p class="texto">Ensino Médio Completo.</p>
-            </div>
-          </div>
+      <!-- Container onde o JS injeta os cards -->
+      <div id="tech-list" class="tech-grid"></div>
+    </section>
 
-          <div class="bloco">
-            <h3 class="subtitulo">Cursos</h3>
+    <!-- CONTATO -->
+    <section id="contato" class="section">
+      <div class="section-badge">CONTATO</div>
+      <h2 class="section-title">Vamos construir <span class="highlight">algo juntos.</span></h2>
+      <p class="hero-description">Aberto a oportunidades profissionais e conexões na área de tecnologia.</p>
 
-            <div class="lista">
-              <ul class="lista-caracteristicas">
-                <li>Liderança</li>
-                <li>Trabalho em Equipe</li>
-                <li>Comunicação</li>
-                <li>Valores Éticos</li>
-                <li>Gestão e Atendimento</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="bloco">
-            <h3 class="subtitulo">Competências</h3>
-
-            <div class="lista">
-              <ul class="lista-caracteristicas">
-                <li>Organização</li>
-                <li>Responsabilidade</li>
-                <li>Proatividade</li>
-                <li>Comunicação</li>
-                <li>Aprendizado contínuo</li>
-              </ul>
-            </div>
-          </div>
+      <div class="contact-card">
+        <div class="contact-item">
+          <span class="contact-label">E-MAIL</span>
+          <a href="mailto:joaquimalmeida2727@gmail.com" class="contact-value">joaquimalmeida2727@gmail.com</a>
         </div>
-      </section>
-
-      <!-- HOBBIES -->
-
-      <section class="card">
-        <div class="conteudo">
-          <div class="bloco">
-            <h2 class="titulo">Hobbies</h2>
-            <div class="galeria">
-              <img class="foto" src="Imagens/foto4.png" alt="Praia" />
-
-              <img class="foto" src="Imagens/foto9.png" alt="Esportes" />
-
-              <img class="foto" src="Imagens/foto6.jpg" alt="Videogame" />
-              <img class="foto" src="Imagens/foto10.png" alt="Mecânica" />
-            </div>
-          </div>
+        <div class="contact-item">
+          <span class="contact-label">TELEFONE</span>
+          <span class="contact-value">(21) 99985-2931</span>
         </div>
-      </section>
-    </main>
+        <div class="contact-item">
+          <span class="contact-label">LINKEDIN</span>
+          <a href="https://www.linkedin.com/in/-joaquimal/" target="_blank" class="contact-value">/in/-joaquimal</a>
+        </div>
+        <div class="contact-item">
+          <span class="contact-label">GITHUB</span>
+          <a href="https://github.com/JoaquimAl-Prog" target="_blank" class="contact-value">/JoaquimAl-Prog</a>
+        </div>
+      </div>
+    </section>
 
-    <footer class="rodape">
-      <hr class="linha" />
-
-      <p><b>© 2026 - Joaquim Almeida</b></p>
-      <a class="voltar-topo" href="#inicio"> Voltar ao topo</a>
+    <!-- RODAPÉ -->
+    <footer class="footer">
+      <p>© 2026 - Joaquim Almeida. Todos os direitos reservados.</p>
+      <a href="#inicio" class="back-to-top">Voltar ao topo &uarr;</a>
     </footer>
+
+    <script src="script.js"></script>
   </body>
 </html>
