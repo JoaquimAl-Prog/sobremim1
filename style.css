@@ -1,5 +1,5 @@
 /* ==========================================================================
-   RESET & VARIÁVEIS GLOBAIS
+   RESET E VARIÁVEIS GLOBAIS
    ========================================================================== */
 * {
   margin: 0;
@@ -15,7 +15,7 @@
   --text-muted: #9ca3af;
   --accent-color: #54ceec;
   --accent-hover: #1a7bbb;
-  --font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 html {
@@ -27,14 +27,14 @@ body {
   color: var(--text-main);
   font-family: var(--font-family);
   line-height: 1.6;
-  background-image: 
+  background-image:
     linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
     linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
   background-size: 40px 40px;
 }
 
 /* ==========================================================================
-   CABEÇALHO & NAVEGAÇÃO
+   CABEÇALHO E NAVEGAÇÃO
    ========================================================================== */
 .header {
   display: flex;
@@ -318,7 +318,7 @@ body {
 }
 
 /* ==========================================================================
-   TIMELINE (EXPERIÊNCIA)
+   EXPERIÊNCIA
    ========================================================================== */
 .code-tag {
   font-family: monospace;
@@ -438,7 +438,9 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  transition: transform 0.2s ease, border-color 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease;
 }
 
 .tech-card:hover {
