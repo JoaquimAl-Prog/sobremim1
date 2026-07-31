@@ -15,6 +15,8 @@
   --text-muted: #9ca3af;
   --accent-color: #54ceec;
   --accent-hover: #1a7bbb;
+  --mouse-x: 50vw;
+  --mouse-y: 30vh;
   --font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
@@ -23,6 +25,9 @@ html {
 }
 
 body {
+  position: relative;
+  isolation: isolate;
+  overflow-x: hidden;
   background-color: var(--bg-color);
   color: var(--text-main);
   font-family: var(--font-family);
@@ -31,6 +36,35 @@ body {
     linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
     linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
   background-size: 40px 40px;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+  background:
+    radial-gradient(
+      circle 180px at var(--mouse-x) var(--mouse-y),
+      rgba(84, 206, 236, 0.28),
+      rgba(84, 206, 236, 0.12) 28%,
+      rgba(84, 206, 236, 0.04) 48%,
+      transparent 90%
+    ),
+    radial-gradient(
+      circle 420px at var(--mouse-x) var(--mouse-y),
+      rgba(84, 206, 236, 0.08),
+      transparent 90%
+    );
+  mix-blend-mode: screen;
+  opacity: 0.5;
+}
+
+@media (pointer: coarse) {
+  body::before {
+    opacity: 0.35;
+  }
 }
 
 /* ==========================================================================
@@ -48,6 +82,7 @@ body {
   z-index: 1000;
   border-bottom: 1px solid var(--border-color);
 }
+
 
 .logo {
   font-size: 1.25rem;
@@ -188,6 +223,7 @@ body {
 .hero-image-wrapper {
   display: flex;
   justify-content: center;
+  transform: translateX(-18px);
 }
 
 .hero-card-img {
@@ -515,6 +551,34 @@ body {
   word-break: break-all;
 }
 
+.contact-action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 2px;
+  padding: 11px 14px;
+  border-radius: 10px;
+  border: 1px solid rgba(84, 206, 236, 0.35);
+  background: rgba(84, 206, 236, 0.08);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.02);
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.contact-action:hover {
+  transform: translateY(-2px);
+  background: rgba(84, 206, 236, 0.14);
+  border-color: rgba(84, 206, 236, 0.6);
+}
+
+.contact-whatsapp:hover {
+  color: #25d366;
+}
+
 .footer {
   display: flex;
   justify-content: space-between;
@@ -537,6 +601,10 @@ body {
   .hero-section {
     grid-template-columns: 1fr;
     text-align: center;
+  }
+
+  .hero-image-wrapper {
+    transform: none;
   }
 
   .hero-title {

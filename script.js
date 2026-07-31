@@ -1,5 +1,37 @@
 // ==========================================================================
-// 1. ARRAY INICIAL DE TECNOLOGIAS E PROJETOS
+// HORÁRIO DE ATUALIZAÇÃO
+// ==========================================================================
+function atualizarHorario() {
+  const agora = new Date();
+  const horas = String(agora.getHours()).padStart(2, "0");
+  const minutos = String(agora.getMinutes()).padStart(2, "0");
+  const horarioFormatado = `${horas}:${minutos}`;
+  document.getElementById("horario-atualizado").textContent = horarioFormatado;
+}
+
+atualizarHorario();
+
+// ==========================================================================
+// PONTO DE LUZ SEGUINDO O CURSOR
+// ==========================================================================
+const raiz = document.documentElement;
+let frameLuz = null;
+
+function atualizarLuzDoCursor(evento) {
+  if (frameLuz) {
+    cancelAnimationFrame(frameLuz);
+  }
+
+  frameLuz = requestAnimationFrame(() => {
+    raiz.style.setProperty("--mouse-x", `${evento.clientX}px`);
+    raiz.style.setProperty("--mouse-y", `${evento.clientY}px`);
+  });
+}
+
+window.addEventListener("pointermove", atualizarLuzDoCursor);
+
+// ==========================================================================
+// TECNOLOGIAS E PROJETOS
 // ==========================================================================
 const itensIniciais = [
   {
@@ -12,7 +44,7 @@ const itensIniciais = [
   {
     id: 2,
     titulo: "JavaScript (ES6+)",
-    categoria: "Front-end",
+    categoria: "Back-end",
     descricao: "Manipulação do DOM, requisições assíncronas e lógica dinâmica.",
     nivel: "Intermediário (45%)",
   },
@@ -26,21 +58,14 @@ const itensIniciais = [
 ];
 
 // ==========================================================================
-// 2. USO DO SPREAD OPERATOR (...) PARA EXPANDIR O ARRAY
+//  USO DO SPREAD OPERATOR (...) PARA EXPANDIR O ARRAY
 // ==========================================================================
 const meusItens = [
   ...itensIniciais,
   {
     id: 4,
-    titulo: "APIs REST & Node.js",
-    categoria: "Back-end",
-    descricao: "Conceitos de rotas, consumo e integração de serviços back-end.",
-    nivel: "Iniciante (30%)",
-  },
-  {
-    id: 5,
     titulo: "TypeScript",
-    categoria: "Front-end",
+    categoria: "Back-end",
     descricao: "Tipagem estática para maior segurança e escalabilidade no JS.",
     nivel: "Intermediário (43%)",
   },
@@ -50,7 +75,7 @@ const meusItens = [
 const techContainer = document.getElementById("tech-list");
 
 // ==========================================================================
-// 3. FUNÇÃO DE RENDERIZAÇÃO DINÂMICA
+//  FUNÇÃO DE RENDERIZAÇÃO DINÂMICA
 // ==========================================================================
 function renderizarItens(lista) {
   techContainer.innerHTML = ""; 
@@ -76,7 +101,7 @@ function renderizarItens(lista) {
 renderizarItens(meusItens);
 
 // ==========================================================================
-// 4. LÓGICA DE FILTRAGEM VIA BOTÕES
+//  LÓGICA DE FILTRAGEM VIA BOTÕES
 // ==========================================================================
 const botoesFiltro = document.querySelectorAll(".btn-filter");
 
